@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -8,9 +9,9 @@ const categories = [
   { title: "La plus belle", intro: "Celle qui fait tourner toutes les têtes." },
   { title: "La plus douce", intro: "La gentillesse incarnée dans un sourire." },
   { title: "Le/la plus frais/plus fraîche (les meilleurs outfit)", intro: "Le style et la fraîcheur réunis avec élégance." },
-  { title: "Le/la plus intelligent/plus intelligente", intro: "L’esprit brillant qui inspire tous." },
+  { title: "Le/la plus intelligent/plus intelligente", intro: "L&apos;esprit brillant qui inspire tous." },
   { title: "Le/la plus drôle", intro: "Celui ou celle qui fait rire sans retenue." },
-  { title: "Le/la plus en retard", intro: "Maître incontesté(e) de l’arrivée tardive." },
+  { title: "Le/la plus en retard", intro: "Maître incontesté(e) de l&apos;arrivée tardive." },
   { title: "Le/la plus charismatique", intro: "Une aura qui captive la salle entière." },
   { title: "Le meilleur surnom", intro: "Le surnom qui restera dans les mémoires." },
 ];

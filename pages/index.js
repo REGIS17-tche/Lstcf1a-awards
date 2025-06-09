@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 
@@ -7,7 +9,6 @@ export default function Home() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    // Si le prénom est déjà en localStorage, on considère que l'utilisateur est déjà entré
     const storedName = localStorage.getItem('lstcf1aName');
     if (storedName) {
       setName(storedName);
@@ -34,7 +35,13 @@ export default function Home() {
         <div className={styles.overlay} />
 
         <div className={styles.content}>
-          <img src="/trophee.png" alt="Trophée des Oscars" className={styles.trophee} />
+          <Image
+            src="/trophee.png"
+            alt="Trophée des Oscars"
+            width={120}
+            height={120}
+            className={styles.trophee}
+          />
 
           <h1 className={styles.title}>LSTCF1A Awards</h1>
 
@@ -45,7 +52,7 @@ export default function Home() {
               </p>
 
               <p className={styles.description}>
-                Ce soir, les étoiles brillent un peu plus fort. Dans un cadre chic, sous une pluie d'étoiles dorées, nous
+                Ce soir, les étoiles brillent un peu plus fort. Dans un cadre chic, sous une pluie d&apos;étoiles dorées, nous
                 rendons hommage aux talents, à l&apos;humour, à l&apos;élégance et à l&apos;esprit de la classe LSTCF1A.
                 <br /><br />
                 Préparez vos discours, ajustez vos tenues, et laissez la magie opérer. Chaque instant compte, chaque
@@ -72,9 +79,9 @@ export default function Home() {
               <p className={styles.thankYou}>
                 Merci {name} ! Vous pouvez maintenant accéder au vote.
               </p>
-              <link href="/vote" className={styles.voteLink}>
+              <Link href="/vote" className={styles.voteLink}>
                 Accéder au vote
-              </link>
+              </Link>
             </>
           )}
         </div>
