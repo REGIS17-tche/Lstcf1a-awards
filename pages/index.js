@@ -41,12 +41,12 @@ export default function Home() {
           {!submitted ? (
             <>
               <p className={styles.subtitle}>
-                Bienvenue à la cérémonie la plus attendue de l’année...
+                Bienvenue à la cérémonie la plus attendue de l&apos;année...
               </p>
 
               <p className={styles.description}>
                 Ce soir, les étoiles brillent un peu plus fort. Dans un cadre chic, sous une pluie d'étoiles dorées, nous
-                rendons hommage aux talents, à l’humour, à l’élégance et à l’esprit de la classe LSTCF1A.
+                rendons hommage aux talents, à l&apos;humour, à l&apos;élégance et à l&apos;esprit de la classe LSTCF1A.
                 <br /><br />
                 Préparez vos discours, ajustez vos tenues, et laissez la magie opérer. Chaque instant compte, chaque
                 vote fait la différence. 🎬
@@ -72,9 +72,9 @@ export default function Home() {
               <p className={styles.thankYou}>
                 Merci {name} ! Vous pouvez maintenant accéder au vote.
               </p>
-              <a href="/vote" className={styles.voteLink}>
+              <link href="/vote" className={styles.voteLink}>
                 Accéder au vote
-              </a>
+              </link>
             </>
           )}
         </div>
