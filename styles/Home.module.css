@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('/background.png') center center / cover no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: none; /* Pas de filtre pour garder l'image naturelle */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15); /* Overlay très léger pour ne pas cacher l'image */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  padding: 40px 20px;
+  color: #f0ecec;
+  font-family: 'Playfair Display', serif;
+  text-shadow:
+    0 0 5px rgba(0,0,0,0.8),
+    0 0 10px rgba(0,0,0,0.6);
+}
+
+.trophee {
+  width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 3.8rem;
+  color: #FFD700;
+  text-shadow:
+    0 0 8px #FFD700,
+    0 0 15px #FFA500,
+    0 0 20px #FF8C00;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #efcf3d;
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+
+.form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.input {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 2px solid gold;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fffbe6;
+  font-size: 1rem;
+  width: 250px;
+  text-align: center;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input::placeholder {
+  color: #fceabb;
+}
+
+.input:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.voteButton {
+  position: relative;
+  padding: 14px 28px;
+  color: #fff8e1;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid gold;
+  border-radius: 40px;
+  background: linear-gradient(145deg, #d4af37, #b8860b);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.voteButton:hover {
+  background: linear-gradient(145deg, #ffd700, #ffcc00);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 223, 0, 0.8), inset 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.thankYou {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  color: #ffd700;
+}
+
+.voteLink {
+  color: #fff8e1;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
